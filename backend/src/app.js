@@ -1,13 +1,24 @@
 const express = require('express');
-const app = express();
-app.use(express.json) 
 
+const healthRoutes = require('./routes/health.routes');
+
+const errorHandler = require('./middlewares/error.middleware');
+
+const app = express();
+
+app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: 'MiniBlog API running'
-  });
+
+    res.status(200).json({
+        success: true,
+        message: 'Welcome to MiniBlog API'
+    });
+
 });
+
+app.use('/health', healthRoutes);
+
+app.use(errorHandler);
 
 module.exports = app;
