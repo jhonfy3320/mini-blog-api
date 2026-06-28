@@ -1,0 +1,30 @@
+const validator = require('validator');
+
+const validateAuthor = (req, res, next) => {
+  const { name, email } = req.body;
+
+  if (!name || name.trim() === '') {
+    return res.status(400).json({
+      success: false,
+      message: 'name is required'
+    });
+  }
+
+  if (!email) {
+    return res.status(400).json({
+      success: false,
+      message: 'email is required'
+    });
+  }
+
+  if (!validator.isEmail(email)) {
+    return res.status(400).json({
+      success: false,
+      message: 'invalid email'
+    });
+  }
+
+  next();
+};
+
+module.exports = validateAuthor;
