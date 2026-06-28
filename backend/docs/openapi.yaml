@@ -1,0 +1,54 @@
+openapi: 3.0.0
+
+info:
+  title: MiniBlog API
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3000
+
+paths:
+
+  /authors:
+
+    get:
+
+      summary: List authors
+
+      responses:
+
+        '200':
+
+          description: Success
+
+    post:
+
+      summary: Create author
+
+      responses:
+
+        '201':
+
+          description: Created
+
+  /posts:
+
+    get:
+
+      summary: List posts
+
+      responses:
+
+        '200':
+
+          description: Success
+
+    post:
+
+      summary: Create post
+
+      responses:
+
+        '201':
+
+          description: Created
