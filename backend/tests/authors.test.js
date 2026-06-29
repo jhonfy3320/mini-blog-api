@@ -10,8 +10,12 @@ describe('Authors', () => {
   });
 
   test('POST invalid author', async () => {
-    const res = await request(app).post('/authors').send({});
-    
+    const res = await request(app).post('/authors').send({
+      name: '',
+      email: ''
+    });
+
     expect(res.statusCode).toBe(400);
+    expect(res.body.success).toBe(false);
   });
 });

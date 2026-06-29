@@ -1,6 +1,8 @@
 const validator = require('validator');
 
+
 const validateAuthor = (req, res, next) => {
+  //console.log('AUTHOR VALIDATOR EXECUTED');
   const { name, email } = req.body;
 
   if (!name || name.trim() === '') {
