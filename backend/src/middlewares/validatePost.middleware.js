@@ -28,12 +28,7 @@
 module.exports = validatePost;*/
 const validatePost = (req, res, next) => {
 
-  const {
-    title,
-    content,
-    author_id,
-    published
-  } = req.body;
+   const {title = '', content = '', author_id, published} = req.body || {};
 
   if (!title || title.trim() === '') {
     return res.status(400).json({
