@@ -1,4 +1,4 @@
-const { Pool } = require('pg');
+/*const { Pool } = require('pg');
 
 const pool = new Pool({
     host: process.env.DB_HOST,
@@ -16,4 +16,5 @@ pool.on('error', (error) => {
     console.error('🔴 PostgreSQL error:', error.message);
 });
 
-module.exports = pool;
+module.exports = pool;*/
+
