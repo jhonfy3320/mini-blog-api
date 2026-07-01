@@ -1,12 +1,26 @@
 {
   "name": "mini-blog-api",
   "version": "1.0.0",
+  "description": "REST API for MiniBlog built with Express and PostgreSQL",
   "main": "server.js",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
     "test": "jest --runInBand --setupFiles ./tests/setup.js --detectOpenHandles"
   },
+  "keywords": [
+    "express",
+    "postgresql",
+    "rest-api",
+    "nodejs",
+    "swagger"
+  ],
+  "author": "Freddy Tavera",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
