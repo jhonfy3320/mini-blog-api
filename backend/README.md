@@ -228,6 +228,158 @@ https://mini-blog-api-production-8077.up.railway.app/api-docs
 
 ---
 ---
+
+
+La aplicación detecta automáticamente el entorno de Railway utilizando la variable `DATABASE_URL` y establece una conexión segura mediante SSL.
+
+---
+
+# Pruebas de la API
+
+## Página principal
+
+GET
+
+```
+https://mini-blog-api-production-8077.up.railway.app/
+```
+
+Respuesta
+
+```json
+{
+  "success": true,
+  "message": "Welcome to MiniBlog API"
+}
+```
+
+---
+
+## Health
+
+GET
+
+```
+https://mini-blog-api-production-8077.up.railway.app/health
+```
+
+---
+
+## Authors
+
+### Obtener todos
+
+GET
+
+```
+https://mini-blog-api-production-8077.up.railway.app/authors
+```
+
+### Obtener uno
+
+GET
+
+```
+https://mini-blog-api-production-8077.up.railway.app/authors/1
+```
+
+### Crear
+
+POST
+
+```
+https://mini-blog-api-production-8077.up.railway.app/authors
+```
+
+Body
+
+```json
+{
+    "name":"Juan Pérez",
+    "email":"juan@email.com",
+    "bio":"Backend Developer"
+}
+```
+
+### Actualizar
+
+PUT
+
+```
+https://mini-blog-api-production-8077.up.railway.app/authors/1
+```
+
+### Eliminar
+
+DELETE
+
+```
+https://mini-blog-api-production-8077.up.railway.app/authors/21
+```
+
+---
+
+## Posts
+
+### Obtener todos
+
+GET
+
+```
+https://mini-blog-api-production-8077.up.railway.app/posts
+```
+
+### Obtener uno
+
+GET
+
+```
+https://mini-blog-api-production-8077.up.railway.app/posts/1
+```
+
+### Obtener por autor
+
+GET
+
+```
+https://mini-blog-api-production-8077.up.railway.app/posts/author/1
+```
+
+### Crear
+
+POST
+
+```
+https://mini-blog-api-production-8077.up.railway.app/posts
+```
+
+```json
+{
+    "title":"Nuevo Post",
+    "content":"Contenido del artículo",
+    "author_id":1,
+    "published":true
+}
+```
+
+### Actualizar
+
+PUT
+
+```
+https://mini-blog-api-production-8077.up.railway.app/posts/1
+```
+
+### Eliminar
+
+DELETE
+
+```
+https://mini-blog-api-production-8077.up.railway.app/posts/21
+```
+
+---
+---
 ## Deployment en Railway
 
 La aplicación fue desplegada utilizando Railway.
