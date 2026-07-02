@@ -3,26 +3,26 @@
 -- ======================
 
 INSERT INTO authors (name, email, bio) VALUES
-('Ana García','[ana@example.com](mailto:ana@example.com)','Desarrolladora backend'),
-('Carlos Ruiz','[carlos@example.com](mailto:carlos@example.com)','Especialista en bases de datos'),
-('María López','[maria@example.com](mailto:maria@example.com)','Ingeniera de software'),
-('Laura Martínez','[laura@example.com](mailto:laura@example.com)','Desarrolladora Node.js'),
-('Jorge Ramírez','[jorge@example.com](mailto:jorge@example.com)','Arquitecto de software'),
-('Valentina Torres','[valentina@example.com](mailto:valentina@example.com)','Especialista REST'),
-('Daniel Herrera','[daniel@example.com](mailto:daniel@example.com)','Backend developer'),
-('Sofía Castro','[sofia@example.com](mailto:sofia@example.com)','Data analyst'),
-('Andrés Moreno','[andres@example.com](mailto:andres@example.com)','Full stack developer'),
-('Camila Vargas','[camila@example.com](mailto:camila@example.com)','Software engineer'),
-('Mateo Gómez','[mateo@example.com](mailto:mateo@example.com)','DevOps engineer'),
-('Juliana Díaz','[juliana@example.com](mailto:juliana@example.com)','Cloud developer'),
-('Felipe Rojas','[felipe@example.com](mailto:felipe@example.com)','Especialista PostgreSQL'),
-('Paula Sánchez','[paula@example.com](mailto:paula@example.com)','Ingeniera backend'),
-('Sebastián Ortiz','[sebastian@example.com](mailto:sebastian@example.com)','Consultor tecnológico'),
-('Natalia Vega','[natalia@example.com](mailto:natalia@example.com)','Desarrolladora APIs'),
-('David Molina','[david@example.com](mailto:david@example.com)','Software architect'),
-('Isabella Pérez','[isabella@example.com](mailto:isabella@example.com)','Backend engineer'),
-('Alejandro Silva','[alejandro@example.com](mailto:alejandro@example.com)','Desarrollador Express'),
-('Gabriela Fernández','[gabriela@example.com](mailto:gabriela@example.com)','Ingeniera informática');
+('Ana García', 'ana@example.com', 'Desarrolladora backend'),
+('Carlos Ruiz', 'carlos@example.com', 'Especialista en bases de datos'),
+('María López', 'maria@example.com', 'Ingeniera de software'),
+('Laura Martínez', 'laura@example.com', 'Desarrolladora Node.js'),
+('Jorge Ramírez', 'jorge@example.com', 'Arquitecto de software'),
+('Valentina Torres', 'valentina@example.com', 'Especialista REST'),
+('Daniel Herrera', 'daniel@example.com', 'Backend developer'),
+('Sofía Castro', 'sofia@example.com', 'Data analyst'),
+('Andrés Moreno', 'andres@example.com', 'Full stack developer'),
+('Camila Vargas', 'camila@example.com', 'Software engineer'),
+('Mateo Gómez', 'mateo@example.com', 'DevOps engineer'),
+('Juliana Díaz', 'juliana@example.com', 'Cloud developer'),
+('Felipe Rojas', 'felipe@example.com', 'Especialista PostgreSQL'),
+('Paula Sánchez', 'paula@example.com', 'Ingeniera backend'),
+('Sebastián Ortiz', 'sebastian@example.com', 'Consultor tecnológico'),
+('Natalia Vega', 'natalia@example.com', 'Desarrolladora APIs'),
+('David Molina', 'david@example.com', 'Software architect'),
+('Isabella Pérez', 'isabella@example.com', 'Backend engineer'),
+('Alejandro Silva', 'alejandro@example.com', 'Desarrollador Express'),
+('Gabriela Fernández', 'gabriela@example.com', 'Ingeniera informática');
 
 -- ======================
 -- INSERT POSTS
