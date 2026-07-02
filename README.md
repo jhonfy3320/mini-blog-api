@@ -406,19 +406,45 @@ Durante el despliegue se utilizó:
 ---
 ---
 
-# Uso de Inteligencia Artificial
+# Registro del uso de Inteligencia Artificial (IA)
 
-Durante el desarrollo del proyecto se utilizó ChatGPT (OpenAI GPT-5.5) como herramienta de apoyo para:
+Durante el desarrollo de este proyecto se utilizó **ChatGPT (OpenAI)** como una herramienta de apoyo para el aprendizaje, la resolución de dudas técnicas y la mejora de la documentación. Todas las sugerencias fueron revisadas, comprendidas y adaptadas antes de ser incorporadas al proyecto.
 
-- Resolver dudas sobre Express.js.
-- Diseñar la arquitectura del proyecto.
-- Revisar consultas SQL.
-- Corregir errores durante el desarrollo.
-- Mejorar la documentación.
-- Apoyar el despliegue en Railway.
-- Explicar conceptos relacionados con PostgreSQL y Node.js.
+## Objetivos del uso de IA
 
-Todas las decisiones finales, implementación, pruebas y validaciones fueron realizadas por el autor del proyecto.
+La IA se utilizó para:
+
+- Resolver dudas sobre el desarrollo de APIs REST con Express.js.
+- Comprender conceptos relacionados con PostgreSQL y SQL.
+- Apoyar la creación de la documentación de la API mediante OpenAPI (Swagger).
+- Corregir errores de sintaxis y configuración.
+- Mejorar la organización y estructura del proyecto.
+- Explicar buenas prácticas de desarrollo backend.
+
+## Actividades en las que se utilizó
+
+| Actividad | Uso de IA |
+| ---------- | --------- |
+| Diseño de la API | Apoyo en la definición de endpoints REST y organización de recursos. |
+| Base de datos | Explicación de consultas SQL, relaciones y conexión con PostgreSQL. |
+| Desarrollo Backend | Resolución de dudas sobre Express.js, middleware, rutas y controladores. |
+| Documentación | Generación y corrección de la especificación OpenAPI (`openapi.yaml`) y apoyo en la redacción del README. |
+| Depuración | Ayuda para identificar y solucionar errores durante el desarrollo. |
+| Buenas prácticas | Recomendaciones sobre estructura del proyecto, separación de responsabilidades y organización del código. |
+
+## Responsabilidad del desarrollador
+
+La inteligencia artificial fue utilizada únicamente como una herramienta de apoyo. Todas las decisiones de diseño, implementación, pruebas y validación del proyecto fueron realizadas por el desarrollador.
+
+Cada sugerencia proporcionada por la IA fue analizada y adaptada según las necesidades del proyecto antes de ser integrada al código.
+
+## Herramienta utilizada
+
+- **ChatGPT (OpenAI)**
+
+## Conclusión
+
+El uso de la inteligencia artificial permitió agilizar el aprendizaje, comprender conceptos técnicos y mejorar la calidad de la documentación y del desarrollo del proyecto. La IA complementó el proceso de desarrollo, pero no reemplazó el análisis, la comprensión ni la responsabilidad del desarrollador.
 
 # Autor
 
