@@ -215,9 +215,64 @@ http://localhost:3000/api-docs
 | POST | /comments |
 
 ---
+---
+# Despliegue
+
+API desplegada en Railway:
+
+https://mini-blog-api-production-8077.up.railway.app
+
+Documentación Swagger:
+
+https://mini-blog-api-production-8077.up.railway.app/api-docs
+
+---
+---
+## Deployment en Railway
+
+La aplicación fue desplegada utilizando Railway.
+
+Variables configuradas:
+
+- DATABASE_URL
+- PORT
+- NODE_ENV=production
+
+Railway proporciona automáticamente la URL pública y la conexión segura hacia PostgreSQL.
+
+---
+---
+
+## Railway
+
+Durante el despliegue se utilizó:
+
+- Public URL: https://mini-blog-api-production-8077.up.railway.app
+
+- Internal URL: utilizada automáticamente por Railway para la comunicación entre servicios dentro del proyecto.
+
+---
+---
+
+# Uso de Inteligencia Artificial
+
+Durante el desarrollo del proyecto se utilizó ChatGPT (OpenAI GPT-5.5) como herramienta de apoyo para:
+
+- Resolver dudas sobre Express.js.
+- Diseñar la arquitectura del proyecto.
+- Revisar consultas SQL.
+- Corregir errores durante el desarrollo.
+- Mejorar la documentación.
+- Apoyar el despliegue en Railway.
+- Explicar conceptos relacionados con PostgreSQL y Node.js.
+
+Todas las decisiones finales, implementación, pruebas y validaciones fueron realizadas por el autor del proyecto.
 
 # Autor
 
 **Jhon Freddy Tavera Blandón**
 
 Proyecto Integrador Backend.
+# Licencia
+
+Proyecto desarrollado con fines académicos.
