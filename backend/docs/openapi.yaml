@@ -6,8 +6,11 @@ info:
   version: 1.0.0
 
 servers:
+  - url: https://mini-blog-api-production-8077.up.railway.app
+    description: Railway Production
+
   - url: http://localhost:3000
-    description: Servidor Local
+    description: Local Development
 
 paths:
 
