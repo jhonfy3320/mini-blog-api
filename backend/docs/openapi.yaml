@@ -2,53 +2,286 @@ openapi: 3.0.0
 
 info:
   title: MiniBlog API
+  description: API REST para gestionar autores, publicaciones y comentarios.
   version: 1.0.0
 
 servers:
   - url: http://localhost:3000
+    description: Servidor Local
 
 paths:
 
   /authors:
 
     get:
-
-      summary: List authors
-
+      summary: Listar autores
+      description: Obtiene todos los autores registrados.
       responses:
-
         '200':
-
-          description: Success
+          description: Lista de autores obtenida correctamente.
 
     post:
+      summary: Crear autor
+      description: Crea un nuevo autor.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthorInput'
+      responses:
+        '201':
+          description: Autor creado correctamente.
+        '400':
+          description: Datos inválidos.
 
-      summary: Create author
+  /authors/{id}:
+
+    get:
+      summary: Obtener autor por ID
+      description: Devuelve un autor específico.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Autor encontrado.
+        '404':
+          description: Autor no encontrado.
+
+    put:
+      summary: Actualizar autor
+      description: Actualiza la información de un autor.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthorInput'
 
       responses:
+        '200':
+          description: Autor actualizado correctamente.
+        '404':
+          description: Autor no encontrado.
 
-        '201':
+    delete:
+      summary: Eliminar autor
+      description: Elimina un autor.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
 
-          description: Created
+      responses:
+        '204':
+          description: Autor eliminado correctamente.
+        '404':
+          description: Autor no encontrado.
 
   /posts:
 
     get:
-
-      summary: List posts
-
+      summary: Listar publicaciones
+      description: Obtiene todos los posts.
       responses:
-
         '200':
-
-          description: Success
+          description: Lista de publicaciones.
 
     post:
+      summary: Crear publicación
+      description: Crea un nuevo post.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInput'
+      responses:
+        '201':
+          description: Publicación creada.
+        '400':
+          description: Datos inválidos.
 
-      summary: Create post
+  /posts/{id}:
+
+    get:
+      summary: Obtener post por ID
+      description: Devuelve un post específico.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
 
       responses:
+        '200':
+          description: Post encontrado.
+        '404':
+          description: Post no encontrado.
 
+    put:
+      summary: Actualizar post
+      description: Actualiza un post existente.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostInput'
+
+      responses:
+        '200':
+          description: Post actualizado.
+        '404':
+          description: Post no encontrado.
+
+    delete:
+      summary: Eliminar post
+      description: Elimina un post.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+
+      responses:
+        '204':
+          description: Post eliminado.
+        '404':
+          description: Post no encontrado.
+
+  /posts/author/{authorId}:
+
+    get:
+      summary: Obtener posts por autor
+      description: Lista todos los posts pertenecientes a un autor.
+      parameters:
+        - name: authorId
+          in: path
+          required: true
+          schema:
+            type: integer
+
+      responses:
+        '200':
+          description: Lista de publicaciones.
+        '404':
+          description: Autor no encontrado.
+
+  /comments:
+
+    get:
+      summary: Listar comentarios
+      description: Devuelve todos los comentarios.
+      responses:
+        '200':
+          description: Lista de comentarios.
+
+    post:
+      summary: Crear comentario
+      description: Crea un comentario.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CommentInput'
+
+      responses:
         '201':
+          description: Comentario creado.
+        '400':
+          description: Datos inválidos.
 
-          description: Created
+components:
+
+  schemas:
+
+    AuthorInput:
+      type: object
+      required:
+        - name
+        - email
+        - bio
+
+      properties:
+        name:
+          type: string
+          example: Ana García
+
+        email:
+          type: string
+          example: ana@example.com
+
+        bio:
+          type: string
+          example: Backend Developer
+
+    PostInput:
+      type: object
+      required:
+        - title
+        - content
+        - author_id
+        - published
+
+      properties:
+
+        title:
+          type: string
+          example: Introducción a Node.js
+
+        content:
+          type: string
+          example: Aprende Express desde cero.
+
+        author_id:
+          type: integer
+          example: 1
+
+        published:
+          type: boolean
+          example: true
+
+    CommentInput:
+      type: object
+      required:
+        - content
+        - author_id
+        - post_id
+
+      properties:
+
+        content:
+          type: string
+          example: Excelente artículo.
+
+        author_id:
+          type: integer
+          example: 2
+
+        post_id:
+          type: integer
+          example: 5
